@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Harvest by cbmi</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Harvest</h1>
+        <p class="header">Harvest CLI and starter project template</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/cbmi/harvest/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/cbmi/harvest/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/cbmi/harvest">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/cbmi">cbmi</a></p>
+
+
+      </header>
+      <section>
+        <h1>Harvest</h1>
+
+<h2>Install</h2>
+
+<div class="highlight"><pre><span class="nv">$ </span>pip install harvest
+</pre></div>
+
+<h2>Harvest CLI</h2>
+
+<h3>Start A New Project</h3>
+
+<div class="highlight"><pre><span class="nv">$ </span>harvest init <span class="o">[</span>--verbose<span class="o">]</span> <span class="o">[</span>--no-env<span class="o">]</span> <span class="o">[</span>--no-input<span class="o">]</span> project_name
+</pre></div>
+
+<p><em><code>project_name</code> must be a valid Python identifier which means it can
+only contain alphanumeric characters and underscores and cannot start
+with a number.</em></p>
+
+<p>This command performs the following steps:</p>
+
+<ul>
+<li>Create a new virtualenv environment (name myproject-env)</li>
+<li>Install Django</li>
+<li>Create a starter project structure using the built-in Harvest template</li>
+<li>Install the base dependencies</li>
+<li>Sync and migrate a SQLite database, this requires you to answer a couple
+prompts (unless <code>--no-input</code> is passed)</li>
+<li>Collect the static files (mainly due to Cilantro)</li>
+</ul><p><strong>Options</strong></p>
+
+<p><code>--verbose</code> - Pass to get all output printed to stdout.</p>
+
+<p><code>--no-env</code> - Pass to prevent creating a virtualenv. If set, it is assumed the
+virtualenv is active prior to running this command to ensure dependencies are
+installed in the correct site-packages directory.</p>
+
+<p><code>--no-input</code> - Pass to prevent being prompted during the setup. This
+currently includes the prompt for setting up a superuser during the database
+sync. This is primarily useful for performing scripted builds.</p>
+
+<h3>Update Harvest</h3>
+
+<div class="highlight"><pre><span class="nv">$ </span>harvest update
+</pre></div>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
