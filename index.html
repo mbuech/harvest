@@ -54,7 +54,8 @@ number, such as <code>myproject</code>, <code>my_project</code>, and <code>proje
 
 <p><strong>Options</strong></p>
 
-<p><code>--verbose</code> - Pass to get all output printed to stdout.</p>
+<p><code>--verbose</code> - Pass to get all output printed to stdout. Multiple flags can be
+passed to increase the verbosity, e.g. <code>-vv</code>.</p>
 
 <p><code>--no-env</code> - Pass to prevent creating a virtualenv. If set, it is assumed the
 virtualenv is active prior to running this command to ensure dependencies are
@@ -162,6 +163,26 @@ Open up a web browser and go to: http://localhost:8000
 
 <div class="highlight"><pre><span class="nv">$ </span>harvest update
 </pre></div>
+
+<h3>Install Demo</h3>
+
+<p>This command installs one of the Harvest demos.</p>
+
+<div class="highlight"><pre><span class="nv">$ </span>harvest init-demo <span class="o">[</span>--verbose<span class="o">]</span> <span class="o">[</span>--no-env<span class="o">]</span> <span class="o">[</span>--no-input<span class="o">]</span> demo_name
+</pre></div>
+
+<p><strong>Arguments</strong></p>
+
+<p><code>demo_name</code> - The name of an available demo which is currently only <code>openmrs</code>.</p>
+
+<p><strong>Options</strong></p>
+
+<p><code>--verbose</code> - Pass to get all output printed to stdout. Multiple flags can be
+passed to increase the verbosity, e.g. <code>-vv</code>.</p>
+
+<p><code>--no-env</code> - Pass to prevent creating a virtualenv. If set, it is assumed the
+virtualenv is active prior to running this command to ensure dependencies are
+installed in the correct site-packages directory.</p>
       </section>
       <footer>
         <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
